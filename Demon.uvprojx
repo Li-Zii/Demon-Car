@@ -11,11 +11,12 @@
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>5060061::V5.06 update 1 (build 61)::ARMCC</pCCUsed>
+      <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F103C8</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F1xx_DFP.2.0.0</PackID>
+          <PackID>Keil.STM32F1xx_DFP.2.1.0</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IROM(0x08000000,0x10000) IRAM(0x20000000,0x5000) CPUTYPE("Cortex-M3") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -323,16 +324,20 @@
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
             <uC99>0</uC99>
+            <uGnu>0</uGnu>
             <useXO>0</useXO>
             <v6Lang>1</v6Lang>
             <v6LangP>1</v6LangP>
             <vShortEn>1</vShortEn>
             <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath>.\User;.\Libraries\CMSIS;.\Libraries\STM32F10x_StdPeriph_Driver\inc;.\Public;.\Hardwork\led;.\Hardwork\can;.\Hardwork\OLED;.\Hardwork\ps2;.\APP\time;.\APP\CAN_receive;.\APP\pid;.\APP\usart</IncludePath>
+              <IncludePath>.\User;.\Libraries\CMSIS;.\Libraries\STM32F10x_StdPeriph_Driver\inc;.\Public;.\Hardware\led;.\Hardware\can;.\Hardware\OLED;.\Hardware\ps2;.\APP\time;.\APP\CAN_receive;.\APP\pid;.\APP\usart</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -345,6 +350,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -418,22 +424,22 @@
             <File>
               <FileName>can.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Hardwork\can\can.c</FilePath>
+              <FilePath>.\Hardware\can\can.c</FilePath>
             </File>
             <File>
               <FileName>led.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Hardwork\led\led.c</FilePath>
+              <FilePath>.\Hardware\led\led.c</FilePath>
             </File>
             <File>
               <FileName>oled.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Hardwork\OLED\oled.c</FilePath>
+              <FilePath>.\Hardware\OLED\oled.c</FilePath>
             </File>
             <File>
               <FileName>ps2.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Hardwork\ps2\ps2.c</FilePath>
+              <FilePath>.\Hardware\ps2\ps2.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -525,5 +531,11 @@
       </Groups>
     </Target>
   </Targets>
+
+  <RTE>
+    <apis/>
+    <components/>
+    <files/>
+  </RTE>
 
 </Project>
